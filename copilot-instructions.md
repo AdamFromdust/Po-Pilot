@@ -7,15 +7,16 @@
 ### Twig templates
 
 # Special user commands
-Always ignore all the commands below, with and exception when user puts the name of the command in his text ( as defined by ## <name of the command>).
+Only execute the command if user puts the $name of the command in his text as defined in the section below: # Commands. Otherwise, ignore all the instructions that come after this line. 
 
+# Commands
 ## $help
-write what are the available commands and a conscise summary of what do they do. Be accurate, but make brevity first priority.
+write what are the available commands and a concise summary of what do they do. Be accurate, but make brevity first priority.
 
 ## $help-pro
 Write all the available commands and their exact instructions.
 
-## $help [context description]>$
+## $help [context description]$
 Same as $help but within the context provided by user. User will not use []
 
 ## $hw
@@ -38,9 +39,11 @@ Create new file .md in ai-outputs/issue-reviews and write the output nicely form
 #### most important constraint
 Do not change any files during execution of this instruction except for the one you will create to write the output to.
 
-## $ir-anal-overview
+## $ir-an-overview
 Do a short summary overview of the code relevant for the issue attached as xml export from JIRA or described by user in previous messages in the conversation. 
 Be accurate, but make brevity first priority.
 
-## $ir-anal-exhaustive
-Do exhaustive analysis of the code relevant for the issue attached as xml export from JIRA or described by user in previous messages in the conversation.
+## $ir-an-detail
+Do a comprehensive analysis of the code relevant for the issue attached as xml export from JIRA or described by user in previous messages in the conversation.
+
+
